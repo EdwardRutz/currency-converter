@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Temperature Converter</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	
+	<body>
+	
+		<header>
+			<h1>Temperature Converter</h1>
+		</header>
+		<div><!--Temperature Inputs-->
+			<form>
+				<label for="tempBox">Temperature</label><br>
+				<input id="tempIn" type="text" name="tempBox" value="40"><br><br>
+				<label>Conversion</label><br>
+				<input id="tempOut" type="text" name="tempBox">
+			</form>
+			<br>
+			<form>
+				<input id="radFahreheit" type="radio" value="fahrenheit" name="tempScale" checked>Fahrenheit<br>
+				<input id="radCelcius" type="radio" value="celcius" name="tempScale">Celcius</input><br><br>
+				<button id="converter" type="submit" value="Submit">Submit</button>
+  			<button type="reset" value="Reset">Reset</button>
+			</form>
+		</div><!--Temperature Inputs-->
+		
+		<footer>
+			
+		</footer>
+		
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+	
+</html>

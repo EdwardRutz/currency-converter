@@ -7,12 +7,10 @@ console.log("main.js active");
 
 //°F to °C: Deduct 32, then multiply by 5, then divide by 9
 function toCelsius () {
-	console.log("toCelsius");
 let tempNum = document.getElementById("tempIn").value;
 	tempNum = Number(tempNum);
 
 	let tempC = (((tempNum - 35) * 5) / 9);
-	console.log("tempC", tempC);
 
 	//Font color for the converted temperature.
 	if(tempC >= 32) {
@@ -31,13 +29,10 @@ let tempNum = document.getElementById("tempIn").value;
 
 //°C to °F:	Multiply by 9, then divide by 5, then add 32
 function toFahrenheit () {
-	console.log("toFahrenheit");
 let tempNum = document.getElementById("tempIn").value;
 	tempNum = Number(tempNum);
-	console.log("tempNum", tempNum);
 
 	let tempF = (((tempNum * 9) / 5) + 32);
-	console.log("tempF", tempF);
 
 //Font color for the converted temperature
 	if(tempF >= 90) {
@@ -67,27 +62,30 @@ var button = document.getElementById("converter");
 
 function determineConverter (clickEvent) {
 	event.preventDefault();//prevents the default submit-refresh on button click.
-  	console.log("submit received", clickEvent);
 
   var scale = document.getElementsByName('tempScale');
-  	console.log("scale", scale);
 
   	let i = 0;
-  	console.log("scale[i]", scale[i].checked);
 
   if(scale[0].checked) {
-  	console.log("scale[0]-F", scale[i]); //scale[0] is fahrenhiet
   	toFahrenheit();
   } else {
-  	console.log("scale[1]-C", scale[i]);
   	toCelsius();
   	}
 }
 
-// Assign a function to be executed when the button is clicked
-console.log("button", button);
-button.addEventListener("click", determineConverter);
+let clearButton = document.getElementById("clear");
+clearButton.addEventListener("click", erase)
 
+function erase (clickEvent) {
+ 	document.getElementById("tempIn").value = "";
+ 	document.getElementById("tempOut").value = "";
+}
+
+
+
+// Assign a function to be executed when the button is clicked
+button.addEventListener("click", determineConverter);
 
 // [_] The below keypress code doesnt allow me to enter a number in the field. Fix.
 // enterKey = document.getElementById("tempIn");

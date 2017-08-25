@@ -22,7 +22,7 @@ Write a program that will convert a temperature from fahrenheit to celsius, or f
 - [X] Create a button that, when clicked, displays the converted
   temperature.
 
-- [ ] Create another button that, when clicked, clears any text
+- [X] Create another button that, when clicked, clears any text
   in the input field.
 
 - [ ] Add an event handler to the input field that checks if the 

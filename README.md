@@ -1,8 +1,8 @@
-#README
+# README
 
 
 
-# Temperature converter
+# [X] Temperature converter
 
 
 ## Requirements
@@ -25,7 +25,7 @@ Write a program that will convert a temperature from fahrenheit to celsius, or f
 - [X] Create another button that, when clicked, clears any text
   in the input field.
 
-- [ ] Add an event handler to the input field that checks if the 
+- [X] Add an event handler to the input field that checks if the 
   user pressed the enter key, and if that happens, perform
   the conversion.
 
@@ -40,7 +40,7 @@ Write a program that will convert a temperature from fahrenheit to celsius, or f
 ## Sources
 [W3Schools: Event Examples](https://www.w3schools.com/js/js_events_examples.asp)
 [W3Schools: DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
-
+[Implicit Submit](https://www.tjvantoll.com/2013/01/01/enter-should-submit-forms-stop-messing-with-that/)
 
 
 

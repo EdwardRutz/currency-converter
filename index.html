@@ -12,7 +12,7 @@
 			<h1>Temperature Converter</h1>
 		</header>
 		<div><!--Temperature Inputs-->
-			<form>
+			<form action="#" onsubmit="determineConverter">
 				<label for="tempBox">Temperature</label><br>
 				<input id="tempIn" type="text" name="tempBox" value="40"><br><br>
 				<label>Conversion</label><br>
@@ -23,7 +23,7 @@
 				<input id="radFahreheit" type="radio" value="fahrenheit" name="tempScale" checked>Fahrenheit<br>
 				<input id="radCelcius" type="radio" value="celcius" name="tempScale">Celcius</input><br><br>
 				<button id="converter" type="submit" value="Submit">Submit</button>
-  			<button type="reset" value="Reset">Reset</button>
+  			<button type="reset" value="">Reset</button>
 			</form>
 		</div><!--Temperature Inputs-->
 		

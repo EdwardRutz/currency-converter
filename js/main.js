@@ -1,3 +1,5 @@
+//[ ] convert if-else to switch
+
 console.log("main.js active");
 
 /***********  SCRIPT  ***************/
@@ -12,8 +14,19 @@ let tempNum = document.getElementById("tempIn").value;
 	let tempC = (((tempNum - 35) * 5) / 9);
 	console.log("tempC", tempC);
 
+	//Font color for the converted temperature.
+	if(tempC >= 32) {
+		document.getElementById("tempOut").style.color = "red";
+	} else {
+		if(tempC < 0){
+			document.getElementById("tempOut").style.color = "blue";		
+		} else {
+			document.getElementById("tempOut").style.color = "green";
+		}
+	}
+
 	let tempCOut = document.getElementById("tempOut");
-	tempCOut.value = tempC;
+	tempCOut.value = tempC.toFixed(0);
 }
 
 //°C to °F:	Multiply by 9, then divide by 5, then add 32
@@ -26,8 +39,20 @@ let tempNum = document.getElementById("tempIn").value;
 	let tempF = (((tempNum * 9) / 5) + 32);
 	console.log("tempF", tempF);
 
+//Font color for the converted temperature
+	if(tempF >= 90) {
+		document.getElementById("tempOut").style.color = "red";
+	} else {
+		if(tempF < 32){
+			document.getElementById("tempOut").style.color = "blue";		
+		} else {
+			document.getElementById("tempOut").style.color = "green";
+		}
+	}
+
+	//Output	
 	let tempFOut = document.getElementById("tempOut");
-	tempFOut.value = tempF;
+	tempFOut.value = tempF.toFixed(0);
 }
 
 
@@ -63,13 +88,18 @@ function determineConverter (clickEvent) {
 console.log("button", button);
 button.addEventListener("click", determineConverter);
 
-document.addEventListener(keyup, determineConverter);
+
+// [_] The below keypress code doesnt allow me to enter a number in the field. Fix.
+// enterKey = document.getElementById("tempIn");
+// enterKey.addEventListener("keypress", determineConverter);
 
 
 
-/***********  SCRIPT  ***************/
 
 
-/***********  SCRIPT  ***************/
+
+
+
+
 
 

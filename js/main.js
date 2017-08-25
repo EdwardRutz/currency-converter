@@ -22,10 +22,11 @@ let tempNum = document.getElementById("tempIn").value;
 			document.getElementById("tempOut").style.color = "green";
 		}
 	}
-
+	//Output
 	let tempCOut = document.getElementById("tempOut");
 	tempCOut.value = tempC.toFixed(0);
 }
+
 
 //°C to °F:	Multiply by 9, then divide by 5, then add 32
 function toFahrenheit () {
@@ -34,7 +35,8 @@ let tempNum = document.getElementById("tempIn").value;
 
 	let tempF = (((tempNum * 9) / 5) + 32);
 
-//Font color for the converted temperature
+
+//Font color of converted temperature range
 	if(tempF >= 90) {
 		document.getElementById("tempOut").style.color = "red";
 	} else {
@@ -55,14 +57,8 @@ let tempNum = document.getElementById("tempIn").value;
 // Get a reference to the button element in the DOM
 var button = document.getElementById("converter");
 
-
-
-// This function should determine which conversion should
-// happen based on which radio button is selected.
-
+//Conversion based on scale chosen via radio buttons
 function determineConverter (clickEvent) {
-	event.preventDefault();//prevents the default submit-refresh on button click.
-
   var scale = document.getElementsByName('tempScale');
 
   	let i = 0;
@@ -74,6 +70,7 @@ function determineConverter (clickEvent) {
   	}
 }
 
+//--------- CLEAR BUTTON ---------
 let clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", erase)
 
@@ -82,14 +79,10 @@ function erase (clickEvent) {
  	document.getElementById("tempOut").value = "";
 }
 
-
-
 // Assign a function to be executed when the button is clicked
 button.addEventListener("click", determineConverter);
 
-// [_] The below keypress code doesnt allow me to enter a number in the field. Fix.
-// enterKey = document.getElementById("tempIn");
-// enterKey.addEventListener("keypress", determineConverter);
+
 
 
 

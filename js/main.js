@@ -1,13 +1,13 @@
 console.log("main.js active");
-pood = "";
+poond = "";
 
 // Get a reference to the button element in the DOM
 var button = document.getElementById("converter");
-var poodButton = document.getElementById("poodInput")
+var poondButton = document.getElementById("poondInput")
 
 // Assign a function to be executed when the button is clicked
 button.addEventListener("click", currencyType);
-poodButton.addEventListener("click", poodConverter);
+poondButton.addEventListener("click", poondConverter);
 
 //Conversion based on scale chosen via radio buttons
 function currencyType (clickEvent) {
@@ -57,7 +57,7 @@ document.getElementById("numOut").style.color = "green";
 
 
 
-//Convert currency to Pood (BLP)
+//Convert currency to poond (BLP)
 
   var arrName = new Array(10);
   arrName[0] = "🐸";
@@ -71,15 +71,15 @@ document.getElementById("numOut").style.color = "green";
   arrName[8] = "🦀";
   arrName[9] = "🏄";
 
-  function poodConverter() {
+  function poondConverter() {
 	  var firstRandomNumber = (Math.round((Math.random()*8)+1))
 	  var secondRandomNumber = (Math.round((Math.random()*8)+1))
 	  var thirdRandomNumber = (Math.round((Math.random()*8)+1))
 
-	  let printPood = document.getElementById("poodOutput");
-	  console.log("printPood", printPood);
+	  let printpoond = document.getElementById("poondOutput");
+	  console.log("printpoond", printpoond);
 
-	  printPood.innerHTML = `${arrName[firstRandomNumber]}  
+	  printpoond.innerHTML = `${arrName[firstRandomNumber]}  
 	  	 ${arrName[secondRandomNumber]}  
 	  	 ${arrName[thirdRandomNumber]}`;
 }

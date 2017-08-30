@@ -1,6 +1,6 @@
 # Currency Converter
 
-Convert Dollars, Rupees and Pood.
+Convert Dollars, Rupees and Poond.
 
 
 

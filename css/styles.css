@@ -4,7 +4,8 @@
 
 
 output {
-	color: green;
+    color: green;
+    font-weight: bolder;
 }
 
 
@@ -13,13 +14,13 @@ output {
 
 /***********  GENERAL  ***************/
 h1 {
-	text-align: center;
+    text-align: center;
 }
 
 
 div {
   width: 700px ;
-  margin: 200px 600px;
+  margin: 10px 10px 30px 600px;
 }
 
 button {
@@ -29,20 +30,16 @@ button {
 
 /***********  PAGE: HOME  ***************/
 
+#poodForm {
+  width: 700px ;
+  margin: 10px 600px;   
+}
 
-
-/***********  PAGE: ONE  ***************/
-
-
-
-/***********  PAGE: TWO  ***************/
-
-
-
-/***********  PAGE: THREE  ***************/
-
-
-
-/***********  PAGE: FOUR  ***************/
+#poodInput {
+  font-size: 18px;
+  font-weight: bolder;
+  color: blue;
+  background-color: white;
+}
 
 

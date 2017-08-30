@@ -1,4 +1,4 @@
-# [ ] Currency Converter
+# Currency Converter
 
 Convert Dollars, Rupees and Pood.
 

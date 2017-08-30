@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Temperature Converter</title>
+		<title>Currency Converter</title>
 			<meta charset="utf-8">
 			<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
@@ -9,24 +9,31 @@
 	<body>
 	
 		<header>
-			<h1>Temperature Converter</h1>
+			<h1>Currency Converter</h1>
 		</header>
-		<div><!--Temperature Inputs-->
-			<form action="#" onsubmit="determineConverter">
-				<label for="tempBox">Temperature</label><br>
-				<input id="tempIn" type="text" name="tempBox" value=""><br><br>
-				<label>Conversion</label><br>
-				<input id="tempOut" type="text" name="tempBox">
+		<div><!--Currency Inputs-->
+			<form action="#" onsubmit="currencyTypenum">
+				<label for="numBox">Enter Currency:</label><br>
+				<input id="numIn" type="text" name="numBox" value=""><br><br>
+				<label>Conversion Result:</label><br>
+				<input id="numOut" type="text" name="numBox">
 			</form>
 			<br>
 			<form>
-				<input id="radFahreheit" type="radio" value="fahrenheit" name="tempScale" checked>Fahrenheit<br>
-				<input id="radCelcius" type="radio" value="celcius" name="tempScale">Celcius</input><br><br>
+				<input id="radFahreheit" type="radio" value="fahrenheit" name="numScale" checked>US Dollar (USD)<br><!--F-->
+				<input id="radCelcius" type="radio" value="celcius" name="numScale">India Rupee (INR)</input><br><br><!--C-->
 				<button id="converter" type="button" value="Submit">Submit</button>
   			<button id="clear" type="button" value="">Reset</button>
 			</form>
-		</div><!--Temperature Inputs-->
-		
+		</div><!--Currency Inputs-->
+			
+		<div id="poodForm">
+		  <form>
+		  	<button id="poodInput" type="button" value="">Convert to Pood (BLP)</button>
+ 			</form>
+ 			<p id="poodOutput"></p>
+ 		</div>
+
 		<footer>
 			
 		</footer>

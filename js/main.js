@@ -14,26 +14,26 @@ function currencyType (clickEvent) {
   var scale = document.getElementsByName('numScale');
 
   if(scale[0].checked) {
-  	toUSD();
+    toUSD();
   } else {
-  	toINR();
-  	}
+    toINR();
+    }
 }
 
 
 //Dollar to Rupee: 1 USD = 63.9 INR
 function toINR () {
 let currencyNum = document.getElementById("numIn").value;
-	currencyNum = Number(currencyNum);
-	let numC = currencyNum * 64;
+    currencyNum = Number(currencyNum);
+    let numC = currencyNum * 64;
 
-	//Font color for converted currency
-	document.getElementById("numOut").style.color = "green";
-	
+    //Font color for converted currency
+    document.getElementById("numOut").style.color = "green";
+    
 
-	//Output
-	let numCOut = document.getElementById("numOut");
-	numCOut.value = numC.toFixed(0);
+    //Output
+    let numCOut = document.getElementById("numOut");
+    numCOut.value = numC.toFixed(0);
 }
 
 
@@ -41,18 +41,18 @@ let currencyNum = document.getElementById("numIn").value;
 //Rupee to Dollar
 function toUSD () {
 let currencyNum = document.getElementById("numIn").value;
-	currencyNum = Number(currencyNum);
+    currencyNum = Number(currencyNum);
 
-	let numF = (currencyNum / 64);
+    let numF = (currencyNum / 64);
 
 
 //Font color of converted currency
 document.getElementById("numOut").style.color = "green";
 
 
-	//Output	
-	let numFOut = document.getElementById("numOut");
-	numFOut.value = numF.toFixed(0);
+    //Output    
+    let numFOut = document.getElementById("numOut");
+    numFOut.value = numF.toFixed(0);
 }
 
 
@@ -72,16 +72,19 @@ document.getElementById("numOut").style.color = "green";
   arrName[9] = "🏄";
 
   function poondConverter() {
-	  var firstRandomNumber = (Math.round((Math.random()*8)+1))
-	  var secondRandomNumber = (Math.round((Math.random()*8)+1))
-	  var thirdRandomNumber = (Math.round((Math.random()*8)+1))
+      var firstRandomNumber = (Math.round((Math.random()*8)+1));
+      var secondRandomNumber = (Math.round((Math.random()*8)+1));
+      var thirdRandomNumber = (Math.round((Math.random()*8)+1));
+      // var firstRandomNumber = (Math.round((Math.random()*8)+1));
+      // var secondRandomNumber = (Math.round((Math.random()*8)+1));
+      // var thirdRandomNumber = (Math.round((Math.random()*8)+1));
 
-	  let printpoond = document.getElementById("poondOutput");
-	  console.log("printpoond", printpoond);
+      let printpoond = document.getElementById("poondOutput");
+      console.log("printpoond", printpoond);
 
-	  printpoond.innerHTML = `${arrName[firstRandomNumber]}  
-	  	 ${arrName[secondRandomNumber]}  
-	  	 ${arrName[thirdRandomNumber]}`;
+      printpoond.innerHTML = `${arrName[firstRandomNumber]}  
+         ${arrName[secondRandomNumber]}  
+         ${arrName[thirdRandomNumber]}`;
 }
 
 
@@ -90,8 +93,8 @@ let clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", erase)
 
 function erase (clickEvent) {
- 	document.getElementById("numIn").value = "";
- 	document.getElementById("numOut").value = "";
+    document.getElementById("numIn").value = "";
+    document.getElementById("numOut").value = "";
 }
 
 
